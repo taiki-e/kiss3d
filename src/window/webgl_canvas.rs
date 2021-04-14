@@ -577,7 +577,7 @@ fn translate_mouse_button(event: &MouseEvent) -> MouseButton {
 }
 
 fn translate_key(event: &KeyboardEvent) -> Key {
-    // FIXME: some of thos mapping may not be correct.
+    // FIXME: some of this mapping may not be correct.
     match event.key().as_str() {
         "1" => Key::Key1,
         "2" => Key::Key2,
@@ -689,7 +689,7 @@ fn translate_key(event: &KeyboardEvent) -> Key {
         "Kana" => Key::Kana,
         "Kanji" => Key::Kanji,
         "LAlt" => Key::LAlt,
-        "{" => Key::LBracket,
+        "{" | "[" => Key::LBracket,
         "LControl" => Key::LControl,
         "LShift" => Key::LShift,
         "LWin" => Key::LWin,
@@ -713,7 +713,7 @@ fn translate_key(event: &KeyboardEvent) -> Key {
         "Power" => Key::Power,
         "PrevTrack" => Key::PrevTrack,
         "RAlt" => Key::RAlt,
-        "}" => Key::RBracket,
+        "}" | "]" => Key::RBracket,
         "RControl" => Key::RControl,
         "RShift" => Key::RShift,
         "RWin" => Key::RWin,
